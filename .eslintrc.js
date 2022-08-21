@@ -1,16 +1,15 @@
 module.exports = {
+  globals: {
+    React: true,
+    JSX: true,
+  },
   root: true,
   extends: '@react-native-community',
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        '@typescript-eslint/no-shadow': ['error'],
-        'no-shadow': 'off',
-        'no-undef': 'off',
-      },
-    },
-  ],
+  rules: {
+    'arrow-body-style': ['error', 'as-needed'],
+    '@typescript-eslint/consistent-type-imports': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+  },
 };
